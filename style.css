@@ -2,6 +2,8 @@
     --color-principal:#EAE7E2;
     --color-secundario:#526534;
     --color-terciario:#000000;
+    --color-cuarto:#EAE7E2;
+    
     --font-principal:'MiTipografia', sans-serif;
     --font-secundaria:'Ibarra Real Nova', serif;
     --font-sizepxs: 1em;
@@ -20,6 +22,9 @@
 
 body {
   font-family: 'MiTipografia', sans-serif;
+  background-image: url(./newimages/textura.png);
+   background-repeat: repeat;
+    background-size: contain;
 }
 
 body {
@@ -49,7 +54,7 @@ header {
    width: 100;
    height: 100vh;
    background-color: var(--color-secundario);
-   color: var(--color-principal);
+   color: var(--color-cuarto);
    text-align: center;
    display: flex;
    flex-direction: column;
@@ -59,7 +64,7 @@ header {
 }
 header p {
     font-size: var(--font-sizem);
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
     font-family:var(--font-principal);
     animation-name: texto;
@@ -71,7 +76,7 @@ header img {
 }
 header h2 {
     font-size: var(--font-sizel);
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
     font-family:var(--font-principal);
     animation-name: texto;
@@ -121,7 +126,7 @@ position: absolute; /* Se posiciona respecto al más cercano "relative" */
 .contador {
     display: flex;
     color: var(--color-secundario);
-    background-color: var(--color-principal);
+   
     justify-content: center;
     padding: 0px 0 30px 0;
     margin: 0;
@@ -220,7 +225,7 @@ audio::-webkit-media-controls-current-time-display {
     gap: 20px;
     font-size: 1.3rem;
     padding: 40px 0 40px 0 ;
-    background-color: var(--color-principal);
+   
 }
 
 .information-bloque {
@@ -261,7 +266,7 @@ audio::-webkit-media-controls-current-time-display {
 }
 
 .bloque2 h3{
-    padding: 6px 0;
+    padding: 20px 0;
     margin: 0;
  font-size: 1.8em;
  color: var(--color-terciario);
@@ -273,41 +278,41 @@ audio::-webkit-media-controls-current-time-display {
  
 .quote {
     width: 100%;
-    height: 60vh;
-    background-image:url(./newimages/a.png) ;
+    height: 360px;
+    background-color: var(--color-secundario);
     background-position: center;
     background-size:cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .quote h3 {
-    color: var(--color-secundario);
+    color: var(--color-principal);
      font-size: 2.2em;
     font-weight: 100;
     text-align: center;
     padding: auto;
     line-height: 1; /* espacio normal */
-
     margin: auto;
 }
 
 .quote2 {
     width: 100%;
-    height: 60vh;
-    background-image:url(./newimages/c.png) ;
-    background-position: bottom;
+    height: 30vh;
+    background-color:var(--color-secundario) ;
+    background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: top;
-    padding-top: 50px;
+    justify-content: center;
+    padding: 60px 0;
 }
 .quote2 h3 {
     color: var(--color-principal);
-     font-size: 2.2em;
+     font-size:3.3em;
     font-weight: 100;
     text-align: center;
     padding: auto;
@@ -316,13 +321,14 @@ audio::-webkit-media-controls-current-time-display {
 .quote1 {
     width: 100%;
     height: 60vh;
-    background-image:url(./newimages/b.png) ;
-    
+    background-color:var(--color-secundario) ;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: top;
+    justify-content: bottom;
 }
 .quote1 h3 {
     color: var(--color-principal);
@@ -348,14 +354,14 @@ audio::-webkit-media-controls-current-time-display {
     font-family: var(--font-principal);
     font-weight: 100;
     font-size: 2.2em;
-    padding: 20px 0 0 0;
+    padding: 20px 0 10px 0;
     margin: 20px 0 0 0;
     margin-bottom: none;
 }
 .timeline img {
 margin: 0;
 padding: 0;
-    width: 200px;
+    width: 60px;
     padding: auto;
     margin: auto;
 }
@@ -376,10 +382,10 @@ padding: 0;
 }
 
 .iconos-block img {
-    width: 140px;
+    width: 80px;
 }
 .iconos-block p {
-    padding: 0;
+    padding: 6px 0;
     font-size: 2em;
     margin: 0;
     font-family: var(--font-principal);
@@ -556,13 +562,35 @@ label .grupo-opciones {
 
 /*FYQ*/
 
+.accordion-header {
+    background-color: transparent;   /* nuevo — sin esto, el navegador pone su gris por defecto */
+    border: 1PX SOLID var(--color-terciario);
+    color: var(--color-terciario);
+    font-family: var(--color-secundario);
+    padding: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    font-weight: normal;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
 
+.accordion-header:hover {
+    background-color: transparent;   /* antes: var(--color-cuartro), que no existía */
+}
+
+.accordion-item.active .accordion-header {
+    background-color: transparent;   /* antes: var(--color-cuartro), mismo typo */
+}
 .accordion {
     position: relative;
     padding: 60PX 0PX 60px 0px;
     width: 100%;
     margin: auto;
-    background-color: var(--color-principal);
+    
   text-align: center;
     font-family: var(--font-secundaria);
     color: var(--color-terciario);
@@ -579,8 +607,9 @@ label .grupo-opciones {
     text-align: center;
 }
 .accordion-item {
-    border: 1px solid #aeaeae;
+    border: 1px solid #5d5b5b;
     margin: 4PX;
+    background-color: transparent;
     text-align: center;
     font-family: var(--font-secundaria);
 }
@@ -588,14 +617,16 @@ label .grupo-opciones {
     margin: auto;
     text-align: center;
 }
-
+.accordion img {
+    width: 50px;
+}
 .accordion-item:last-child {
     border-bottom: none;
 }
 
 .accordion-header {
     border: 1PX SOLID var(--color-terciario);
-    background-color:var(--color-principal);
+    
     color: var(--color-terciario);
     font-family: var(--color-secundario);
     padding: 15px;
@@ -619,7 +650,9 @@ label .grupo-opciones {
     padding: 0 15px;
     transition: max-height 0.3s ease, padding 0.3s ease;
 }
-
+.accordion-content .mapa {
+    width: 320px;
+}
 .accordion-content p {
     padding: 15px 0 ;
     margin: 0;
@@ -628,7 +661,7 @@ label .grupo-opciones {
 }
 
 .accordion-item.active .accordion-content {
-    max-height: 300px;
+    max-height: 600px;
     padding: 15px;
 }
 
@@ -666,16 +699,16 @@ position: absolute; /* Se posiciona respecto al más cercano "relative" */
 .quote2 p {
     color: var(--color-principal);
     font-family: var(--font-secundaria);
-    padding: 0;
+    padding: 0 0 10px 0;
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.8em;
 }
 
 .quote2 h2 {
     color: var(--color-principal);
-    padding: 0;
+    padding: 10px 0;
     margin: 0;
-    font-size: 2.2em;
+    font-size: 3.2em;
 }
 
 
@@ -702,19 +735,12 @@ position: absolute; /* Se posiciona respecto al más cercano "relative" */
     border-radius: 50PX;
 
  }
- .boton:hover {
-     color: var(--color-secundario);
-     background-color: var(--color-principal);
-     border: 1px solid var(--color-secundario);
-     padding: 10px 30PX;
-     text-align: center;
-     text-decoration: none;
- }
+
 footer {
     width: 100%;
     height: auto;
     margin: 0;
-    background-color: var(--color-secundario);
+    background-color: #8d9e6f;
     color: var(--color-principal);
     padding: 40px 0;
     text-align: center;
